@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 public class LevelController : MonoBehaviour
 {
-    public int index;
+   // public int index;
     public string levelName;
     public TextMeshPro scoreText;
     //public PlayerController playerController;
@@ -16,7 +16,7 @@ public class LevelController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(index);
+            SceneManager.LoadScene(levelName);
             PersistentManagerScript.Instance.points++;
             //playerController.DoubleMovementspeed();
 

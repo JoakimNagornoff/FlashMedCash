@@ -8,7 +8,7 @@ public class GameOverController : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level1");
         FindObjectOfType<PersistentManagerScript>().gameOverSign.SetActive(false);
         //FindObjectOfType<GameManager>().Startlives();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
