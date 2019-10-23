@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshPro scoreText;
 
-   // public GameObject gameOverSign;
-    public PersistentManagerScript persistentManagerScript;
+
     private LivesController livesController;
     public SpawnerController spawnerController;
 
@@ -42,7 +41,6 @@ public class PlayerController : MonoBehaviour
         myLocation = this.transform;
         startPos = myLocation.position;
 
-        //gameOverSign = GameObject.Find("GameOver");
         livesController = GameObject.Find("lives").GetComponent<LivesController>();
     }
 
@@ -74,11 +72,9 @@ public class PlayerController : MonoBehaviour
             Vector3 pos = transform.position;
             pos.x += movementSpeed * Time.deltaTime;
             transform.position = pos;
-
         }
         
     }
-  
     //metod när spelaren har sprungit klart banan, sätt en poäng.
 
     

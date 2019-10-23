@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
     public int index;
     public string levelName;
     public TextMeshPro scoreText;
+    //public PlayerController playerController;
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +18,8 @@ public class LevelController : MonoBehaviour
         {
             SceneManager.LoadScene(index);
             PersistentManagerScript.Instance.points++;
+            //playerController.DoubleMovementspeed();
+
 
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
