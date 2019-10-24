@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         if(!livesController.RemoveLife())
         {
             GameOver();
-          // persistentManagerScript.GameOverSign();
+            FindObjectOfType<PersistentManagerScript>().GameOverSign();
         }
 
     }
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         if(spawnerController2Right != null)
             spawnerController2Right.Stop();
         playerStop();
-        FindObjectOfType<PersistentManagerScript>().GameOverSign();
+        //FindObjectOfType<PersistentManagerScript>().GameOverSign();
        // persistentManagerScript.GameOverSign();
        // Debug.Log("Game over");
     }

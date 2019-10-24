@@ -10,17 +10,17 @@ public class GameOverController : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
         FindObjectOfType<PersistentManagerScript>().gameOverSign.SetActive(false);
-        //FindObjectOfType<GameManager>().Startlives();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-        // destroy lives
-        // destroy persistantMan
-
-
         Destroy(GameObject.Find("lives"));
         Destroy(GameObject.Find("PersistentManager"));
 
+
+    }
+    public void WinnerRestartGame()
+    {
+        SceneManager.LoadScene("Level1");
+        PersistentManagerScript.Instance.points = 0;
+        Destroy(GameObject.Find("lives"));
+        Destroy(GameObject.Find("PersistentManager"));
 
     }
     public void QuitGame()

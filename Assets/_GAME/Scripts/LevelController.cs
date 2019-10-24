@@ -16,7 +16,7 @@ public class LevelController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(levelName);
+            SceneManager.LoadScene("Level2");
             PersistentManagerScript.Instance.points++;
             //playerController.DoubleMovementspeed();
 
